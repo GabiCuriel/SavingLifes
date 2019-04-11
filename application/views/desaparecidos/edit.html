@@ -1,0 +1,58 @@
+$def with(desaparecidos, message)
+<h3>
+    <a href="/desaparecidos">Desaparecidos</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_desaparecidos" id="id_desaparecidos" value="$desaparecidos.id_desaparecidos" />
+
+    <div class="form-group">
+    <label for="nombre_p">Nombre Completo:</label>
+    <input required id="nombre_p" type="text" class="form-control" name="nombre_p" size="30" value="$desaparecidos.nombre_p"/>
+</div><div class="form-group">
+    <label for="email_p">Correo Electrónico:</label>
+    <input required id="email_p" type="email" class="form-control" name="email_p" size="30" value="$desaparecidos.email_p"/>
+</div><div class="form-group">
+    <label for="telefono_p">Número Telefónico:</label>
+    <input required id="telefono_p" type="number" class="form-control" name="telefono_p" size="30" value="$desaparecidos.telefono_p"/>
+</div><div class="form-group">
+    <label for="municipio_p">Municipio:</label>
+    <input required id="municipio_p" type="text" class="form-control" name="municipio_p" size="30" value="$desaparecidos.municipio_p"/>
+</div><div class="form-group">
+    <label for="colonia_p">Colonia:</label>
+    <input required id="colonia_p" type="text" class="form-control" name="colonia_p" size="30" value="$desaparecidos.colonia_p"/>
+</div><div class="form-group">
+    <label for="fecha_p">Fecha:</label>
+    <input required id="fecha_p" type="date" class="form-control" name="fecha_p" size="30" value="$desaparecidos.fecha_p"/>
+</div><div class="form-group">
+    <label for="nombre_m">Nombre(Mascota):</label>
+    <input required id="nombre_m" type="text" class="form-control" name="nombre_m" size="30" value="$desaparecidos.nombre_m"/>
+</div><div class="form-group">
+    <label for="edad_m">Edad(Mascota):</label>
+    <input required id="edad_m" type="text" class="form-control" name="edad_m" size="30" value="$desaparecidos.edad_m"/>
+</div><div class="form-group">
+    <label for="sexo_m">Sexo(Mascota):</label>
+    <input required id="sexo_m" type="text" class="form-control" name="sexo_m" size="30" value="$desaparecidos.sexo_m"/>
+</div><div class="form-group">
+    <label for="tipo_m">Tipo(Mascota)</label>
+    <input required id="tipo_m" type="text" class="form-control" name="tipo_m" size="30" value="$desaparecidos.tipo_m"/>
+</div><div class="form-group">
+    <label for="descripcion_m">Características y Descripción:</label>
+    <input required id="descripcion_m" type="text" class="form-control" name="descripcion_m" size="30" value="$desaparecidos.descripcion_m"/>
+</div><div class="form-group">
+    <label for="id_usuario">Datos(Usuario)</label>
+    <input required id="id_usuario" type="text" class="form-control" name="id_usuario" size="30" value="$desaparecidos.id_usuario"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

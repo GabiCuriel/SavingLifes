@@ -1,0 +1,61 @@
+$def with(adoptar, message)
+<h3>
+    <a href="/adoptar">Adoptar</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+    <style>
+        input{width: 50%; font-family: 'Roboto Condensed', sans-serif; color: black; width: 530px; 
+        height: 25px; margin: 7px;-webkit-border-radius: 6px; -moz-border-radius: 6px; border: 1px solid #BDC2C9;}
+    </style>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_publicar" id="id_publicar" value="$adoptar.id_publicar" />
+
+    <div class="form-group">
+    <label for="nom_persona">Nombre Completo:</label>
+    <input required id="nom_persona" type="text" class="form-control" name="nom_persona" size="30" value="$adoptar.nom_persona"/>
+</div><div class="form-group">
+    <label for="email">Correo Electrónico:</label>
+    <input required id="email" type="email" class="form-control" name="email" size="30" value="$adoptar.email"/>
+</div><div class="form-group">
+    <label for="telefono">Número Telefónico:</label>
+    <input required id="telefono" type="number" class="form-control" name="telefono" size="30" value="$adoptar.telefono"/>
+</div><div class="form-group">
+    <label for="municipio">Municipio:</label>
+    <input required id="municipio" type="text" class="form-control" name="municipio" size="30" value="$adoptar.municipio"/>
+</div><div class="form-group">
+    <label for="colonia">Colonia:</label>
+    <input required id="colonia" type="text" class="form-control" name="colonia" size="30" value="$adoptar.colonia"/>
+</div><div class="form-group">
+    <label for="fecha">Fecha de Publicación:</label>
+    <input required id="fecha" type="date" class="form-control" name="fecha" size="30" value="$adoptar.fecha"/>
+</div><div class="form-group">
+    <label for="nom_mascota">Nombre(Mascota):</label>
+    <input required id="nom_mascota" type="text" class="form-control" name="nom_mascota" size="30" value="$adoptar.nom_mascota"/>
+</div><div class="form-group">
+    <label for="edad_mascota">Edad(Mascota):</label>
+    <input required id="edad_mascota" type="text" class="form-control" name="edad_mascota" size="30" value="$adoptar.edad_mascota"/>
+</div><div class="form-group">
+    <label for="sexo_mascota">Sexo(Mascota):</label>
+    <input required id="sexo_mascota" type="text" class="form-control" name="sexo_mascota" size="30" value="$adoptar.sexo_mascota"/>
+</div><div class="form-group">
+    <label for="tipo_mascota">Tipo(Mascota):</label>
+    <input required id="tipo_mascota" type="text" class="form-control" name="tipo_mascota" size="30" value="$adoptar.tipo_mascota"/>
+</div><div class="form-group">
+    <label for="descripcion_mascota">Características y Descripción:</label>
+    <input required id="descripcion_mascota" type="text" class="form-control" name="descripcion_mascota" size="30" value="$adoptar.descripcion_mascota"/>
+</div><div class="form-group">
+    <label for="id_usuario"></label>
+    <input required id="id_usuario" type="text" class="form-control" name="id_usuario" size="30" value="$adoptar.id_usuario"/>
+</div>
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span>Editar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

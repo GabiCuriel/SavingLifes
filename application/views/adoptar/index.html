@@ -1,0 +1,43 @@
+$def with(adoptar)
+<h3>
+    <a href="/adoptar">Adoptar</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Nombre Usuario</th>
+        <th>Correo Electrónico</th>
+        <th>Número Telefónico</th>
+        <th>Municipio</th>
+        <th>Colonia</th>
+        <th>Fecha(Publicación)</th>
+        <th>Nombre(Mascota)</th>
+        <th>Edad(Mascota)</th>
+        <th>Tipo(Mascota)</th>
+        <th>Caracteísticas y Descripción</th>
+        <th>Datos(Usuario)</th>
+        <th>Imagen</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </thead>
+    <tbody>
+        $for item in adoptar:
+        <tr>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.nom_persona</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.email</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.telefono</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.municipio</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.colonia</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.fecha</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.nom_mascota</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.edad_mascota</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.tipo_mascota</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.descripcion_mascota</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.id_usuario</a></td>
+            <td><a href='/adoptar/view/$item.id_publicar'>$item.imagen</a></td>
+            <td><a href='/adoptar/edit/$item.id_publicar'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/adoptar/delete/$item.id_publicar'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

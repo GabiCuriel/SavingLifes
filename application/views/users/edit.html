@@ -1,0 +1,110 @@
+$def with(users, message)
+<h3>
+    <a href="/users">Usuarios</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="username" id="username" value="$users.username" />
+
+    <div class="form-group">
+        <label>Nombre de Usuario:</label>
+        <input readonly id="un" type="text" class="form-control" name="un" size="30" value="$users.username.split('!')[0]"/>
+    </div>
+
+    <div class="form-group">
+        <label>Nombre Completo:</label>
+        <input required id="name" type="text" class="form-control" name="name" size="30" value="$users.name"/>
+    </div>
+
+    <div class="form-group">
+        <label>Contraseña:</label>
+        <input required id="password" type="password" class="form-control" name="password" size="30" value="$users.password"/>
+    </div>
+
+    <div class="form-group">
+        <label>Privilegios</label>
+        $if users.privilege == 0:
+             <div class="radio">
+                <label><input type="radio" name="privilege" value=0 checked>Admin</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="privilege" value=1>Guess</label>
+            </div>
+
+        $else:
+             <div class="radio">
+                <label><input type="radio" name="privilege" value=0>Admin</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="privilege" value=1 checked>Guess</label>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label>Estado:</label>
+        $if users.status == 0:
+             <div class="radio">
+                <label><input type="radio" name="status" value=0 checked>Deshabilidato</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="status" value=1>Habiliftado</label>
+            </div>
+
+        $else:
+             <div class="radio">
+                <label><input type="radio" name="status" value=0>Deshabilitado</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="status" value=1 checked>Habilitado</label>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label>Correo Electr+onico:</label>
+        <input required id="email" type="email" class="form-control" name="email" size="30" value="$users.email"/>
+    </div>
+
+    <div class="form-group">
+        <label>Otro:</label>
+        <input required id="other_data" type="text" class="form-control" name="other_data" size="30" value="$users.other_data"/>
+    </div>
+
+    <div class="form-group">
+        <label>Userhash</label>
+        <input readonly id="user_hash" type="text" class="form-control" name="user_hash" size="32" value="$users.user_hash"/>
+    </div>
+
+    <div class="form-group">
+        <label>Force change password</label>
+        $if users.change_pwd == 0:
+             <div class="radio">
+                <label><input type="radio" name="change_pwd" value=0 checked>No</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="change_pwd" value=1>Si</label>
+            </div>
+
+        $else:
+             <div class="radio">
+                <label><input type="radio" name="change_pwd" value=0>No</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="change_pwd" value=1 checked>Si</label>
+            </div>
+    </div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span>Editar</button>
+    </div>
+
+
+</form>
+
+<br>
+<br>
+<br>

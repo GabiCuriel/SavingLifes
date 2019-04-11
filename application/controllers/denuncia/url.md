@@ -1,0 +1,5 @@
+'/denuncia', 'application.controllers.denuncia.index.Index',
+'/denuncia/view/(.+)', 'application.controllers.denuncia.view.View',
+'/denuncia/edit/(.+)', 'application.controllers.denuncia.edit.Edit',
+'/denuncia/delete/(.+)', 'application.controllers.denuncia.delete.Delete',
+'/denuncia/insert', 'application.controllers.denuncia.insert.Insert',

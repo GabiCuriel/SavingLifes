@@ -1,0 +1,34 @@
+$def with(denuncia, message)
+<h3>
+    <a href="/denuncia">Denuncia</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_denuncia" id="id_denuncia" value="$denuncia.id_denuncia" />
+
+    <div class="form-group">
+    <label for="nombre_d">Nombre Completo:</label>
+    <input required id="nombre_d" type="text" class="form-control" name="nombre_d" size="30" value="$denuncia.nombre_d"/>
+</div><div class="form-group">
+    <label for="descripcion_d">Descripcion del Suceso:</label>
+    <input required id="descripcion_d" type="text" class="form-control" name="descripcion_d" size="30" value="$denuncia.descripcion_d"/>
+</div><div class="form-group">
+    <label for="municipio_d">Municipio:</label>
+    <input required id="municipio_d" type="text" class="form-control" name="municipio_d" size="30" value="$denuncia.municipio_d"/>
+</div><div class="form-group">
+    <label for="colonia_d">Colonia:</label>
+    <input required id="colonia_d" type="text" class="form-control" name="colonia_d" size="30" value="$denuncia.colonia_d"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span> Editar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

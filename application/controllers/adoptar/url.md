@@ -1,0 +1,5 @@
+'/adoptar', 'application.controllers.adoptar.index.Index',
+'/adoptar/view/(.+)', 'application.controllers.adoptar.view.View',
+'/adoptar/edit/(.+)', 'application.controllers.adoptar.edit.Edit',
+'/adoptar/delete/(.+)', 'application.controllers.adoptar.delete.Delete',
+'/adoptar/insert', 'application.controllers.adoptar.insert.Insert',

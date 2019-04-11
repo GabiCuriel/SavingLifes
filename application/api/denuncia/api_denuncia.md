@@ -1,0 +1,1 @@
+'/api_denuncia/?', 'application.api.denuncia.api_denuncia.Api_denuncia',

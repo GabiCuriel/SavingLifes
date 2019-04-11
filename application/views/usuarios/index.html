@@ -1,0 +1,35 @@
+$def with(usuarios)
+<h3>
+    <a href="/usuarios">Usuarios</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Nombre de Usuario</th>
+        <th>Correo Electrónico</th>
+        <th>Número Telefónico</th>
+        <th>Contraseña</th>
+        <th>Municipio</th>
+        <th>Colonia</th>
+        <th>Tipo de Usuario</th>
+        <th>Imagen</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </thead>
+    <tbody>
+        $for item in usuarios:
+        <tr>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.nombre_u</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.email_u</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.telefono_u</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.password</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.municipio_u</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.colonia_u</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.tipo_u</a></td>
+            <td><a href='/usuarios/view/$item.id_usuario'>$item.imagen</a></td>
+            <td><a href='/usuarios/edit/$item.id_usuario'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/usuarios/delete/$item.id_usuario'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

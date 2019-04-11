@@ -1,0 +1,18 @@
+$def with(usuarios)
+<style>
+    img{height: 50%; width: 50%; float: left;}
+</style>
+<h3>
+    <a href="/usuarios">Usuarios</a>
+</h3>
+<b>Nombre:</b> $usuarios.nombre_u <br>
+<b>Correo Electrónico:</b> $usuarios.email_u <br>
+<b>Número Telefónico</b> $usuarios.telefono_u <br>
+<b>Contraseña:</b> $usuarios.password <br>
+<b>Municipio:</b> $usuarios.municipio_u <br>
+<b>Colonia:</b> $usuarios.colonia_u <br>
+<b>Tipo de Usuario:</b> $usuarios.tipo_u <br>
+<b>Inagen</b> $usuarios.imagen <br>
+<img src="/static/files/usuarios_img/$usuarios.imagen">
+<br>
+<br>

@@ -1,0 +1,35 @@
+$def with(comentarios, message)
+<h3>
+    <a href="/comentarios">comentarios</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+    <br>
+    <style>
+        input{width: 50%; font-family: 'Roboto Condensed', sans-serif; color: black; width: 530px; 
+        height: 25px; margin: 7px;-webkit-border-radius: 6px; -moz-border-radius: 6px; border: 1px solid #BDC2C9;}
+    </style>
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_comentario" id="id_comentario" value="$comentarios.id_comentario" />
+
+    <div class="form-group">
+    <label for="nombre">Nombre Completo:</label>
+    <input required id="nombre" type="text" class="form-control" name="nombre" size="30" value="$comentarios.nombre"/>
+</div><div class="form-group">
+    <label for="email">Correo Electrónico:</label>
+    <input required id="email" type="email" class="form-control" name="email" size="30" value="$comentarios.email"/>
+</div><div class="form-group">
+    <label for="comentario">Comentario:</label>
+    <input required id="comentario" type="text" class="form-control" name="comentario" size="30" value="$comentarios.comentario"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-pencil"></span>Editar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>

@@ -1,0 +1,25 @@
+$def with(comentarios)
+<h3>
+    <a href="/comentarios">Comentarios</a>
+</h3>
+<table id="datos_tabla" class="table table-hover" cellspacing="0" width="100%">
+    <thead>
+        <th>Nombre</th>
+        <th>Correo Electrónico</th>
+        <th>Comentarios</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </thead>
+    <tbody>
+        $for item in comentarios:
+        <tr>
+            <td><a href='/comentarios/view/$item.id_comentario'>$item.nombre</a></td>
+            <td><a href='/comentarios/view/$item.id_comentario'>$item.email</a></td>
+            <td><a href='/comentarios/view/$item.id_comentario'>$item.comentario</a></td>
+            <td><a href='/comentarios/edit/$item.id_comentario'><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href='/comentarios/delete/$item.id_comentario'><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>

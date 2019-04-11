@@ -1,0 +1,19 @@
+$def with(users)
+<h3>
+    <a href="/logs">Registros</a>
+</h3>
+<strong>Nombre Completo:</strong> $users.name <br>
+<strong>Nombre de Usuario:</strong> $users.username <br>
+$if users.status == 0:
+    <strong>Estado:</strong> Desabilitado <br>
+$else:
+    <strong>Estado:</strong> Abilitado <br>
+<strong>Correo Electrónico:</strong> $users.email <br>
+<strong>Otro:</strong> $users.other_data <br>
+<strong>UserHash:</strong> $users.user_hash <br>
+$if users.privilege == 0:
+    <strong>Privilegio:</strong> Admin<br>
+$else:
+    <strong>Privilegio:</strong> Guess<br>
+<br>
+<br>

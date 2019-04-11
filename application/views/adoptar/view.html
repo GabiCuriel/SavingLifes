@@ -1,0 +1,23 @@
+$def with(adoptar)
+<style>
+    img{height: 50%; width: 50%; float: left;}
+</style>
+<h3>
+    <a href="/adoptar">Adoptar</a>
+</h3>
+<b>Nombre Completo:</b> $adoptar.nom_persona <br>
+<b>Correo Electrónico:</b> $adoptar.email <br>
+<b>Número Telefónico:</b> $adoptar.telefono <br>
+<b>Municipio:</b> $adoptar.municipio <br>
+<b>Colonia:</b> $adoptar.colonia <br>
+<b>Fecha de Publicación:</b> $adoptar.fecha <br>
+<b>Nombre(Mascota):</b> $adoptar.nom_mascota <br>
+<b>Edad(Mascota):</b> $adoptar.edad_mascota <br>
+<b>Sexo(Mascota):</b> $adoptar.sexo_mascota <br>
+<b>Tipo(Mascota):</b> $adoptar.tipo_mascota <br>
+<b>Características y Descripción:</b><br> $adoptar.descripcion_mascota <br>
+<b>Datos(Usuario):</b> $adoptar.id_usuario <br>
+<b>Imagen:</b></br> $adoptar.imagen <br>
+<img src="/static/files/adoptar_img/$adoptar.imagen">
+<br>
+<br>

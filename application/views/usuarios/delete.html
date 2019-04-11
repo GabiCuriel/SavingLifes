@@ -1,0 +1,47 @@
+$def with(usuarios, message)
+<h3>
+    <a href="/usuarios">Usuarios</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_usuario" id="id_usuario" value="$usuarios.id_usuario" />
+
+    <div class="form-group">
+    <label for="nombre_u">Nombre de Usuario:</label>
+    <input readonly id="nombre_u" type="text" class="form-control" name="nombre_u" size="30" value="$usuarios.nombre_u"/>
+</div><div class="form-group">
+    <label for="email_u">Correo Electrónico:</label>
+    <input readonly id="email_u" type="email" class="form-control" name="email_u" size="30" value="$usuarios.email_u"/>
+</div><div class="form-group">
+    <label for="telefono_u">Número Telefónico:</label>
+    <input readonly id="telefono_u" type="number" class="form-control" name="telefono_u" size="30" value="$usuarios.telefono_u"/>
+</div><div class="form-group">
+    <label for="password">Contraseña:</label>
+    <input readonly id="password" type="text" class="form-control" name="password" size="30" value="$usuarios.password"/>
+</div><div class="form-group">
+    <label for="municipio_u">Municipio;</label>
+    <input readonly id="municipio_u" type="text" class="form-control" name="municipio_u" size="30" value="$usuarios.municipio_u"/>
+</div><div class="form-group">
+    <label for="colonia_u">Colonia:</label>
+    <input readonly id="colonia_u" type="text" class="form-control" name="colonia_u" size="30" value="$usuarios.colonia_u"/>
+</div><div class="form-group">
+    <label for="tipo_u">Tipo de Usuario:</label>
+    <input readonly id="tipo_u" type="text" class="form-control" name="tipo_u" size="30" value="$usuarios.tipo_u"/>
+</div><div class="form-group">
+    <label for="imagen">Imagen</label>
+    <input readonly id="imagen" type="file" class="form-control" name="imagen" size="30" value="$usuarios.imagen"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span>Eliminar</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
