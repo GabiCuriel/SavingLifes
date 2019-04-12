@@ -19,7 +19,8 @@ create table denuncia(
     id_denuncia integer not null PRIMARY KEY AUTO_INCREMENT,
     nombre_d varchar(30) not null,
     descripcion_d text not null,
-    municipio_d varchar(30) not null,
+    municipio
+    _d varchar(30) not null,
     colonia_d varchar(30) not null,
     imagen text null)ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
