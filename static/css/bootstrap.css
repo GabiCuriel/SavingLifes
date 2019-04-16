@@ -1087,7 +1087,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: black;
+  color: orange;
   text-decoration: none;
 }
 a:hover,
@@ -1173,7 +1173,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: fantasy;
   font-weight: 500;
   line-height: 1.1;
   color: #EF4C0B;
@@ -1202,7 +1202,7 @@ h6 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small {
-  font-weight: normal;
+  font-weight: fantasy;
   line-height: 1;
   color: #777777;
 }
@@ -1259,6 +1259,7 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
+  color: orange
 }
 h3,
 .h3 {

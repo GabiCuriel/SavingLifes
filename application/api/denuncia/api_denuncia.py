@@ -29,9 +29,9 @@ class Api_denuncia:
             return json.dumps(denuncia_json)
 
 # http://0.0.0.0:8080/api_denuncia?user_hash=12345&action=put&id_denuncia=1&product=nuevo&description=nueva&stock=10&purchase_price=1&price_sale=3&product_image=0
-    def put(self, nombre_d,descripcion_d,municipio_d,colonia_d,imagen):
+    def put(self, descripcion_d,calle_d,municipio_d,colonia_d,longitud,latitud):
         try:
-            config.model.insert_denuncia(nombre_d,descripcion_d,municipio_d,colonia_d,imagen)
+            config.model.insert_denuncia(descripcion_d,calle_d,municipio_d,colonia_d,longitud,latitud)
             denuncia_json = '[{200}]'
             web.header('Content-Type', 'application/json')
             return json.dumps(denuncia_json)
@@ -51,9 +51,9 @@ class Api_denuncia:
             return None
 
 # http://0.0.0.0:8080/api_denuncia?user_hash=12345&action=update&id_denuncia=1&product=nuevo&description=nueva&stock=10&purchase_price=1&price_sale=3&product_image=default.jpg
-    def update(self, id_denuncia, nombre_d,descripcion_d,municipio_d,colonia_d,imagen):
+    def update(self, id_denuncia, descripcion_d,calle_d,municipio_d,colonia_d,longitud,latitud):
         try:
-            config.model.edit_denuncia(id_denuncia,nombre_d,descripcion_d,municipio_d,colonia_d,imagen)
+            config.model.edit_denuncia(id_denuncia,descripcion_d,calle_d,municipio_d,colonia_d,longitud,latitud)
             denuncia_json = '[{200}]'
             web.header('Content-Type', 'application/json')
             return json.dumps(denuncia_json)
@@ -68,21 +68,23 @@ class Api_denuncia:
             user_hash=None,
             action=None,
             id_denuncia=None,
-            nombre_d=None,
             descripcion_d=None,
+            calle_d=None,
             municipio_d=None,
             colonia_d=None,
-            imagen=None,
+            longitud=None,
+            latitud=None,
         )
         try:
             user_hash = user_data.user_hash  # user validation
             action = user_data.action  # action GET, PUT, DELETE, UPDATE
             id_denuncia=user_data.id_denuncia
-            nombre_d=user_data.nombre_d
             descripcion_d=user_data.descripcion_d
+            calle_d=user_data.calle_d
             municipio_d=user_data.municipio_d
             colonia_d=user_data.colonia_d
-            imagen=user_data.imagen
+            longitud=user_data.longitud
+            latitud=user_data.latitud
             # user_hash
             if user_hash == '12345':
                 if action is None:
@@ -90,11 +92,11 @@ class Api_denuncia:
                 elif action == 'get':
                     return self.get(id_denuncia)
                 elif action == 'put':
-                    return self.put(nombre_d,descripcion_d,municipio_d,colonia_d,imagen)
+                    return self.put(descripcion_d,calle_d,municipio_d,colonia_d,longitud,latitud)
                 elif action == 'delete':
                     return self.delete(id_denuncia)
                 elif action == 'update':
-                    return self.update(id_denuncia, nombre_d,descripcion_d,municipio_d,colonia_d,imagen)
+                    return self.update(id_denuncia, descripcion_d,calle_d,municipio_d,colonia_d,longitud,latitud)
             else:
                 raise web.seeother('/404')
         except Exception as e:
