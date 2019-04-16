@@ -1,0 +1,41 @@
+$def with(denuncia, message)
+<h3>
+    <a href="/denuncia">denuncia</a>
+</h3>
+$if message != None:
+    <div class="alert alert-warning">
+        <strong>Advertencia </strong> $message
+    </div>
+<br>
+
+<form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id_denuncia" id="id_denuncia" value="$denuncia.id_denuncia" />
+
+    <div class="form-group">
+    <label for="descripcion_d">descripcion_d</label>
+    <input readonly id="descripcion_d" type="text" class="form-control" name="descripcion_d" size="30" value="$denuncia.descripcion_d"/>
+</div><div class="form-group">
+    <label for="calle_d">calle_d</label>
+    <input readonly id="calle_d" type="text" class="form-control" name="calle_d" size="30" value="$denuncia.calle_d"/>
+</div><div class="form-group">
+    <label for="municipio_d">municipio_d</label>
+    <input readonly id="municipio_d" type="text" class="form-control" name="municipio_d" size="30" value="$denuncia.municipio_d"/>
+</div><div class="form-group">
+    <label for="colonia_d">colonia_d</label>
+    <input readonly id="colonia_d" type="text" class="form-control" name="colonia_d" size="30" value="$denuncia.colonia_d"/>
+</div><div class="form-group">
+    <label for="longitud">longitud</label>
+    <input readonly id="longitud" type="text" class="form-control" name="longitud" size="30" value="$denuncia.longitud"/>
+</div><div class="form-group">
+    <label for="latitud">latitud</label>
+    <input readonly id="latitud" type="text" class="form-control" name="latitud" size="30" value="$denuncia.latitud"/>
+</div>
+
+    <div class="form-group">
+        <label></label>
+        <button id="send" name="send" class="form-control"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+    </div>
+</form>
+<br>
+<br>
+<br>
