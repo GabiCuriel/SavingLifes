@@ -108,6 +108,7 @@ CREATE TABLE logs(
     FOREIGN KEY (username) REFERENCES users(username)
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-create user 'gadai'@'localhost' identified by 'gadai.2019';
-grant all privileges on gadai.* to 'gadai'@'localhost';
+create user 'c2410og4t3mifdju'@'localhost' identified by 'obq28rtba4cgb8dv';
+grant all privileges on s3icpvk5swtsrx6f.* to 'z1ntn1zv0f1qbh8u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'@'localhost';
 flush privileges; 
+
