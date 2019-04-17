@@ -68,6 +68,19 @@ mark {
   background: #ff0;
   color: #EF4C0B;
 }
+
+.texto{height: 50px;
+width: 50px;
+}
+
+p{
+  color: #000;
+  font-family:fantasy;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0.67em 0;
+}
+
 small {
   font-size: 80%;
 }
