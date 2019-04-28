@@ -43,12 +43,13 @@ alert("Registro Exitoso!");
         {
         
             //usamos la API para geolocalizar el usuario
-                navigator.geolocation.getCurrentPosition(
-                  function (position){
+                
+            //navigator.geolocation.getCurrentPosition(
+              //    function (position){
                     coords =  {
-                      lng: position.coords.longitude,
-                      lat: position.coords.latitude
-                   //  lat: -34.397, lng: 150.644
+                      //lng: position.coords.longitude,
+                      //lat: position.coords.latitude
+                     lat: -98.40522, lng: 20.075628
                     };
                     setMapa(coords);  //pasamos las coordenadas al metodo para crear el mapa
                     
